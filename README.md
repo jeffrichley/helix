@@ -22,6 +22,8 @@ This lets the same agentic system work across different domains:
 - [General Agent](docs/general-agent.md)
 - [Skill Contract](docs/skill-contract.md)
 - [Tool Contract](docs/tool-contract.md)
+- [Experiment Schema](docs/experiment-schema.md)
+- [Runtime Scaffold](docs/runtime-scaffold.md)
 
 ## Design goal
 
@@ -37,3 +39,17 @@ general iterative research runtime:
 7. Repeat.
 
 The reusable part is the loop. Skills and tools adapt that loop to a domain.
+
+## Reference Runtime
+
+The repo now includes a small Python scaffold for the architecture:
+
+- [helix/agent.py](helix/agent.py)
+- [helix/models.py](helix/models.py)
+- [helix/contracts.py](helix/contracts.py)
+- [helix/memory.py](helix/memory.py)
+- [helix/skills/algorithm_improvement.py](helix/skills/algorithm_improvement.py)
+- [helix/tools/mock.py](helix/tools/mock.py)
+
+This is intentionally minimal. It establishes the contracts and a single-step
+research loop without yet committing to a large runtime or a single domain.
